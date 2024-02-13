@@ -3,6 +3,7 @@ from datetime import datetime
 from flask_login import UserMixin
 from passlib.hash import sha256_crypt
 from sqlalchemy import LargeBinary
+from sqlalchemy import DDL
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -17,6 +18,7 @@ class User(UserMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow)
 
+
     def to_json(self):
         return {
             'id': self.id,
@@ -28,4 +30,18 @@ class User(UserMixin, db.Model):
             'is_active': True 
         }
     
-    
+class UserAudit(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    method = db.Column(db.String(10), nullable=False)
+    user_id = db.Column(db.Integer)
+    old_username = db.Column(db.String(255))
+    new_username = db.Column(db.String(255))
+    old_email = db.Column(db.String(255))
+    new_email = db.Column(db.String(255))
+    old_first_name = db.Column(db.String(255))
+    new_first_name = db.Column(db.String(255))
+    old_last_name = db.Column(db.String(255))
+    new_last_name = db.Column(db.String(255))
+    log_time = db.Column(db.TIMESTAMP, default=datetime.utcnow)
+
+   
