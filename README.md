@@ -39,8 +39,8 @@
     <li>Clone the repository:</li>
 </ol>
 
-<pre><code>git clone https://github.com/fajarsyaa/uts-pl-sql.git
-cd user-service-api
+<pre><code>git clone https://github.com/rafiandhika/UAS-Microservice-CRUD-API-PL-SQL-UNSIA.git
+cd UAS-Microservice-CRUD-API-PL-SQL-UNSIA/
 </code></pre>
 
 <ol start="2">
@@ -58,9 +58,7 @@ cd user-service-api
 
 <p>Make sure to set up your database and apply the necessary migrations. For example, using Flask-Migrate:</p>
 
-<pre><code>flask db init
-flask db migrate
-flask db upgrade
+<pre><code>flask db upgrade
 </code></pre>
 
 <h2>Usage</h2>
@@ -151,16 +149,12 @@ flask db upgrade
         <li><strong>Endpoint:</strong> <code>/api/user/delete/<int:user_id></code></li>
         <li><strong>Method:</strong> <code>DELETE</code></li>
         <li><strong>Description:</strong> Delete a user (admin access required).</li>
-        <li><strong>cUrl:</strong> <pre><code>curl --location --request DELETE 'http://127.0.0.1:5000/api/user/delete/20' \
+        <li><strong>cUrl:</strong> <pre><code>curl --location --request DELETE 'http://127.0.0.1:5000/api/user/delete/2' \
 --header 'client-api-key: fajarfajarfajar' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJleHAiOjE3MDI4MjgxNDIsImlzX2FkbWluIjpmYWxzZX0.LJ7DibQ7cvQ2i4n7vg5kbpEqCiCTmbBUHZbY6kNHqaU' \
---header 'Cookie: session=.eJwljsluwjAURf_F6wp5jGN2bYDiiEG0ZdwgPw9gQlJmAVX_vZa6PDpHV_cHrcPJn7eofTld_QtaR4faCJRlghKWgzegOA0yCzI3IfhgQm6ASRxIRoTLScgsAWrAAjAVOCPUeS4yr3IcPKeOSCoVS4py5QQQyq3yNMdcYoGdwZI76r1zgWGTGRcsGCJQOnI9-9P_G8oSX74r3yTwj3IL7zaOY6mnT01GUZ918yFsoTNdHRazolStFBFLZw-oe5fVZxLN7Lla6Dgoyr3vv8bxrsuGHc2Hu8191EkD9f65oL0K5vur3h3q5fyeetwalLITYSLtbUIjb-RtIyo4dI9FLL5qeJv2V7DMqlH_aKbo9w9x4WcD.ZX3G7g.5IY-aIefKkWZuE47uBRbTikQCcw' \
---data-raw '{
-    "first_name":"okwe",
-    "username":"muezaaa",
-    "email":"jarxsa@gmail.com"
-}'</code></pre></li>
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE3MDc4NDY4NjcsImlzX2FkbWluIjp0cnVlfQ.DnDtgeOJyPqXjaPh5z4JJriRJoYDqBQA7x66MfRZYrw' \
+--header 'Cookie: session=.eJwljsluwjAURf_F6wp5jGN2bYDiiEG0ZdwgPw9gQlJmAVX_vZa6PDpHV_cHrcPJn7eofTld_QtaR4faCJRlghKWgzegOA0yCzI3IfhgQm6ASRxIRoTLScgsAWrAAjAVOCPUeS4yr3IcPKeOSCoVS4py5QQQyq3yNMdcYoGdwZI76r1zgWGTGRcsGCJQOnI9-9P_G8oSX74r3yTwj3IL7zaOY6mnT01GUZ918yFsoTNdHRazolStFBFLZw-oe5fVZxLN7Lla6Dgoyr3vv8bxrsuGHc2Hu8191EkD9f65oL0K5vur3h3q5fyeetwalLITYSLtbUIjb-RtIyo4dI9FLL5qeJv2V7DMqlH_aKbo9w9x4WcD.ZX3G7g.5IY-aIefKkWZuE47uBRbTikQCcw; session=.eJwljktvgkAYRf8L68bME2bcWSx2SJWqqRI3Zr55FBTUAqbVpv-9k7i4yb05Z3F_o73vXF9F46G7uqdoX9toHIE0lBNMBTgNkhGfxD4R2nvntRcaaII8jjG3AvvYYCAaDACVnlFMrGM8dlIg7xixOCGJpAERJi0HTJiRjgjEEsSR1ShhljhnradIx9p6AxrzKBy59q57vMFhDuejO4XubnkFM1MXda4-7govatWr04qbVMXqeCk3aS5HQcKGbG7QZsNuHUCbHWHbXHW5QKbNEFBVv6V5414ndXF4ofOp4fO7Cpn3qm3uJXn46nBB5rRp_HKUo-G9JKvnz0m3_THL_kt0l2_TTGeiqJZpVpxttZvEh7UHEf39A5JEanM.ZcurhQ.7GFNMADyEPVbTlQZye5IDV72Guw' \
+--data ''</code></pre></li>
     </ul>
     
 </ol>
